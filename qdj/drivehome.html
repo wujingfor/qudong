@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="rem.js"></script>
+	<link rel="stylesheet" type="text/css" href="swiper-3.4.1.min.css">
+	<script src="swiper-3.4.1.min.js"></script>
+	<script src="jquery-1.7.2.js"></script>
+<style>
+
+	
+</style>
+<script>
+	(function(){
+		$(function(){
+			//点击按钮变红
+			$('.nav-menu a').on('touchstart',function(){
+				$('.nav-menu a').removeClass('menu-bor');
+				$(this).addClass('menu-bor');
+			});
+			
+			
+			//轮播图
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 2000,//可选选项，自动滑动
+				pagination : '.swiper-pagination'
+			});
+			//交互
+			var newsUrl='http://v.juhe.cn/toutiao/index?type=top&key=d54a7ae78f4852d38a3474e87e743a1a';
+			$.ajax({
+				url:'https://bird.ioliu.cn/v1',
+				data:{
+					url:newsUrl
+				},
+				dataType:'jsonp',
+				success:function(data){
+					var arr=data.result.data;
+					var arrTwo=data.result.data;
+					arrTwo=arrTwo.slice(0,2);
+					arr=arr.slice(0,5);
+					arr.forEach(function(item){
+						var aLi=datato(item)
+						$(aLi).appendTo($('.data'))
+					});
+					arrTwo.forEach(function(item){
+						var aLi=datato(item)
+						$(aLi).appendTo($('.data-list'))
+					})
+					var sLi=$('<li class="next-page"><p>【下一页】</p></li>');
+			$(sLi).appendTo($('.data-list'))
+					$('.data li a').css({"foontSize":"0.625rem","whiteSpace":"nowrap","overflow":"hidden","textOverflow":"ellipsis","width":"16.0rem","width":"13.0rem"});
+				}
+			})
+
+			function datato(item){
+				var aLi='<li><a href="'+item.url+'">'+item.title+'</a>'
+					+'<div class="data-box">'
+						+'<div class="data-name">'
+							+'<p>'+item.category+'</p>'
+							+'<span></span>'
+							+'<p>分钟</p>'
+						+'</div>'
+							+'<div class="data-num">'
+							+'<a href="javascript:;">2</a>'
+							+'<a class="data-bg" href="javascript:;"></a>'
+						+'</div>'
+					+'</div>'
+				+'</li>';
+				return aLi;
+			}
+			
+		})
+	})()
+
+</script>
+</head>
+<body>
+	
+</body>
+
+<nav>
+	<div class="nav-box">
+		<a class="nav-box-a" href="javascript:;"></a>
+		<a class="font-w" href="javascript:;">传统版</a>
+	</div>
+	<div class="nav-bor"></div>
+</nav>
+<section>
+	<div class="nav-menu">
+		<a class="menu-bor" href="javascript:;">全部</a>
+		<a href="javascript:;">硬件</a>
+		<a href="javascript:;">软件</a>
+		<a href="javascript:;">手机</a>
+		<a href="javascript:;">科技</a>
+	</div>
+	<div class="swiper-container box-swiper">
+		<div class="swiper-wrapper box-sp">
+			<div class="swiper-slide box-img">
+				<img src="img/banner.jpg">
+				<div class="box-opa">
+					<p class="box-opac"></p>
+					<p class="box-opact">风景这么么美</p>
+				</div>
+			</div>
+			<div class="swiper-slide box-img">
+				<img src="img/banner.jpg">
+				<div class="box-opa">
+					<p class="box-opac"></p>
+					<p class="box-opact">风景这么么美</p>
+				</div>
+			</div>
+			<div class="swiper-slide box-img">
+				<img src="img/banner.jpg">
+				<div class="box-opa">
+					<p class="box-opac"></p>
+					<p class="box-opact">风景这么么美</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	
+	<div class="box-bor"></div>
+	<ul class="data">
+		<!-- <li><a href="javascript:;"><h3>金发美女+比基尼在零重力下的诱惑</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li>
+		<li><a href="javascript:;"><h3>三星入门4G手机续航测试:秒掉Nexus5</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li>
+		<li><a href="javascript:;"><h3>PSV版《生化奇兵》到底还有木有了？</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li>
+		<li><a href="javascript:;"><h3>苏宁架构大调：设八大直属独立公司</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li>
+		<li><a href="javascript:;"><h3>百度蓐羊毛继续：一分钱换迅雷白金会员</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li> -->
+	</ul>
+	<ul class="data-down">
+		<li><a href="javascript:;">
+				<img src="img/iplone_03.png">
+				<p>触目惊心 揭秘iPhone翻新全过程</p>
+			</a>
+			<a href="javascript:;">
+				<img src="img/iplone2_03.png">
+				<p>触目惊心 揭秘iPhone翻新全过程</p>
+			</a>
+		</li>
+	</ul>
+	<ul class="data-list">
+		<!-- <li><a href="javascript:;"><h3>金发美女+比基尼在零重力下的诱惑</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li>
+		<li><a href="javascript:;"><h3>三星入门4G手机续航测试:秒掉Nexus5</h3></a>
+			<div class="data-box">
+				<div class="data-name">
+					<p>小小</p>
+					<span></span>
+					<p>5分钟</p>
+				</div>
+				<div class="data-num">
+					<a href="javascript:;">2</a>
+					<a class="data-bg" href="javascript:;"></a>
+				</div>
+			</div>
+		</li> -->
+		<!-- <li class="next-page"><p>【下一页】</p></li> -->
+	</ul>
+</section>
+<footer>
+	<div class="box-font">
+		<div class="box-pc">
+			<a href="javascript:;"><span>PC版</span></a>
+			<p></p>
+			<a href="javascript:;"><span>触屏版</span></a>
+			<p></p>
+			<a href="javascript:;"><span>传统版</span></a>
+		</div>
+		<div class="foot">
+			<p>京IPC备 11024344号-7 驱动之家 京公网安</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>

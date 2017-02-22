@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: #000;
+  list-style: none; }
+
+nav .nav-box {
+  width: 16.0rem;
+  height: 2.0rem;
+  background: #d70302;
+  border-bottom: 0.225rem solid #d80407;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.575rem 0 0.75rem;
+  box-sizing: border-box; }
+  nav .nav-box .nav-box-a {
+    width: 5.45rem;
+    height: 1.525rem;
+    display: block;
+    background: url(../img/qudong.png) no-repeat;
+    background-size: 5.45rem 1.525rem; }
+  nav .nav-box .font-w {
+    color: #fff;
+    font-weight: 300; }
+
+nav .nav-bor {
+  width: 16.0rem;
+  height: 0.1rem;
+  background: #c9b8bb; }
+
+section .nav-menu {
+  width: 16.0rem;
+  height: 1.675rem;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1.125rem 0 0.375rem; }
+  section .nav-menu a {
+    width: 3.0rem;
+    height: 1.2rem;
+    color: #7f7f7f;
+    font-weight: 300;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2rem;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+  section .nav-menu .menu-bor {
+    color: #df9793;
+    border: 0.05rem solid #df9793; }
+
+section .box-swiper {
+  position: relative; }
+  section .box-swiper .box-sp .box-img img {
+    width: 16.0rem;
+    height: 8.0rem;
+    vertical-align: top; }
+  section .box-swiper .box-sp .box-img .box-opa {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 16.0rem;
+    height: 0.95rem;
+    box-sizing: border-box;
+    padding: 0.25rem 0 0 0.5rem; }
+    section .box-swiper .box-sp .box-img .box-opa .box-opac {
+      position: absolute;
+      bottom: 0;
+      width: 16.0rem;
+      height: 0.95rem;
+      background: #000;
+      opacity: 0.2; }
+    section .box-swiper .box-sp .box-img .box-opa .box-opact {
+      position: absolute;
+      width: 16.0rem;
+      height: 0.95rem;
+      color: #fff;
+      font-weight: 400;
+      font-size: 0.625rem; }
+  section .box-swiper .swiper-pagination {
+    text-align: right;
+    bottom: 0.2rem;
+    width: 14.0rem; }
+    section .box-swiper .swiper-pagination .swiper-pagination-bullet {
+      width: 0.25rem;
+      height: 0.25rem;
+      background: #ccc;
+      border-radius: 0; }
+
+section .box-bor {
+  width: 16.0rem;
+  height: 0.35rem;
+  background: #9a9a9a; }
+
+section .data li, section .data-list li {
+  width: 16.0rem;
+  border-bottom: 0.05rem solid #f6f6f6;
+  box-sizing: border-box;
+  padding: 0.95rem 1.0rem 0 0.5rem; }
+  section .data li a, section .data-list li a {
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 0.5rem; }
+  section .data li .data-box, section .data-list li .data-box {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 0.875rem 0 0.5rem;
+    margin-bottom: 0.6rem; }
+    section .data li .data-box .data-name, section .data-list li .data-box .data-name {
+      width: 5.1rem;
+      display: flex;
+      align-items: center; }
+      section .data li .data-box .data-name p, section .data-list li .data-box .data-name p {
+        font-size: 0.625rem;
+        color: #ccc; }
+      section .data li .data-box .data-name span, section .data-list li .data-box .data-name span {
+        display: inline-block;
+        width: 0.05rem;
+        height: 0.6rem;
+        background: #ccc;
+        margin: 0 0.75rem 0 0.5rem; }
+    section .data li .data-box .data-num, section .data-list li .data-box .data-num {
+      width: 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      section .data li .data-box .data-num .data-bg, section .data-list li .data-box .data-num .data-bg {
+        width: 0.875rem;
+        height: 0.85rem;
+        display: inline-block;
+        background: url(../img/xiao.png) no-repeat;
+        background-size: 0.875rem 0.85rem; }
+
+section .data .next-page, section .data-list .next-page {
+  width: 16.0rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 0.375rem; }
+
+section .data-down {
+  height: 8.525rem;
+  margin-top: 1.475rem; }
+  section .data-down li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 1.8rem 0 1.05rem; }
+    section .data-down li a {
+      width: 6.0rem;
+      height: 4.5rem;
+      display: block; }
+      section .data-down li a img {
+        width: 6.0rem;
+        height: 4.5rem; }
+      section .data-down li a p {
+        margin-top: 0.75rem; }
+
+footer .box-font {
+  width: 16.0rem;
+  height: 4.0rem;
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 0.875rem; }
+  footer .box-font .box-pc {
+    width: 16.0rem;
+    height: 1.125rem;
+    display: flex;
+    justify-content: center; }
+    footer .box-font .box-pc p {
+      width: 0.05rem;
+      height: 0.625rem;
+      background: #d3d3d3;
+      margin: 0 0.25rem 0 0.65rem; }
+    footer .box-font .box-pc p:nth-child(4) {
+      margin: 0 0.5rem 0 0.25rem; }
+
+footer .foot {
+  display: flex;
+  justify-content: center; }
